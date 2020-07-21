@@ -24,10 +24,7 @@ public class TiposPrimitivos {
 		
 		short miShort = 500;
 		
-		System.out.println("El valor de miShort es " + miShort);
-		
-		
-		
+		System.out.println("El valor de miShort es " + miShort);	
 
 	}
 
