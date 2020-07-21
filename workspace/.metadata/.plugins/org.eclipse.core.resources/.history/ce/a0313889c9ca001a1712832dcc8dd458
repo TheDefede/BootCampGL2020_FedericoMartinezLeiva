@@ -1,0 +1,11 @@
+package ar.com.gl.debugging.entity;
+
+import java.util.ArrayList;
+
+public class Celula {
+	
+	private int Numero;
+	private Referente referente;
+	private ArrayList<Alumno> alumnos;
+
+}

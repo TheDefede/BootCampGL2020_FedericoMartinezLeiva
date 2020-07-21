@@ -1,0 +1,37 @@
+package ar.com.gl.debugging.entity;
+
+import java.util.ArrayList;
+
+public class Bootcamp {
+
+	public static void main(String[] args) {
+		
+		final Celula celula = new Celula();
+		final Referente referente = new Referente("GL66", "Emmanuel Ortiz");
+		final ArrayList<Alumno> alumnos = new ArrayList<>();
+		
+		alumnos.add(new Alumno(1,"Juan Perez"));
+		alumnos.add(new Alumno(2, "Pedro Sanchez"));
+		
+		celula.setNumero(9);
+		celula.setReferente(referente);
+		celula.setAlumnos(alumnos);
+		
+		printCelula(celula);
+		
+	}
+
+	private static void printCelula(Celula celula) {
+		
+		System.out.println("===============================");
+		System.out.println("* Celula " + celula.getNumero() + "\n");
+		System.out.println("**** Referente: " + celula.getReferente().getNombre() + "\n");
+		
+		for(Alumno alumno : celula.getAlumnos()){
+			System.out.println("***** Alumno: " + alumno.getNombre() + "\n");
+		}
+		
+		System.out.println("----------------------------------------");
+	}
+
+}

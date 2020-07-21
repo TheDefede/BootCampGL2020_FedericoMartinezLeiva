@@ -1,0 +1,22 @@
+package ar.com.gl.debugging.entity;
+
+import java.util.ArrayList;
+
+public class Bootcamp {
+
+	public static void main(String[] args) {
+		
+		final Celula celula = new Celula();
+		final Referente referente = new Referente("GL66", "Rodrigo Riquelme");
+		final Alumno alumnoUno = new Alumno(1,"Juan Perez");
+		final Alumno alumnoDos = new Alumno(2, "Pedro Sanchez");
+		final ArrayList<Alumno> alumnos = new ArrayList<>();
+		
+		alumnos.add(alumnoUno);
+		alumnos.add(alumnoDos);
+		
+		celula.setNumero(5);
+		celula.setReferente(referente);
+	}
+
+}

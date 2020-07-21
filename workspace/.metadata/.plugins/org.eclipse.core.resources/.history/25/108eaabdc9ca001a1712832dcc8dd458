@@ -1,0 +1,8 @@
+package ar.com.gl.debugging.entity;
+
+public class Alumno {
+	
+	private String codigo;
+	private String nombre;
+
+}

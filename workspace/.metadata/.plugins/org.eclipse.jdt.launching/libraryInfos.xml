@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+<libraryInfo home="C:\GLBootCamp\app\java" version="1.8.0_252">
+<bootpath>
+<entry path="C:\GLBootCamp\app\java\jre\lib\resources.jar"/>
+<entry path="C:\GLBootCamp\app\java\jre\lib\rt.jar"/>
+<entry path="C:\GLBootCamp\app\java\jre\lib\sunrsasign.jar"/>
+<entry path="C:\GLBootCamp\app\java\jre\lib\jsse.jar"/>
+<entry path="C:\GLBootCamp\app\java\jre\lib\jce.jar"/>
+<entry path="C:\GLBootCamp\app\java\jre\lib\charsets.jar"/>
+<entry path="C:\GLBootCamp\app\java\jre\lib\jfr.jar"/>
+<entry path="C:\GLBootCamp\app\java\jre\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="C:\GLBootCamp\app\java\jre\lib\ext"/>
+<entry path="C:\WINDOWS\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="C:\GLBootCamp\app\java\jre\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+</libraryInfos>

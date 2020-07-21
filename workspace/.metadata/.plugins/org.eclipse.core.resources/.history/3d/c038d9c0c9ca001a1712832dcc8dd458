@@ -1,0 +1,16 @@
+package ar.com.gl.debugging.entity;
+
+public class Alumno {
+	
+	private String codigo;
+	private String nombre;
+	
+	public Alumno(String codigo, String nombre) {
+		super();
+		this.codigo = codigo;
+		this.nombre = nombre;
+	}
+	
+	
+
+}

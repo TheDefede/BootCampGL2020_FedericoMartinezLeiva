@@ -1,0 +1,9 @@
+package ar.com.gl.debugging.entity;
+
+public class Celula {
+	
+	private int Numero;
+	private Referente referente;
+	private ArrayList<Alumno> alumnos;
+
+}

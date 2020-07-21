@@ -1,0 +1,32 @@
+package ar.com.gl.debugging.entity;
+
+import java.util.ArrayList;
+
+public class Celula {
+	
+	private int Numero;
+	private Referente referente;
+	private ArrayList<Alumno> alumnos;
+	
+	public int getNumero() {
+		return Numero;
+	}
+	public void setNumero(int numero) {
+		Numero = numero;
+	}
+	public Referente getReferente() {
+		return referente;
+	}
+	public void setReferente(Referente referente) {
+		this.referente = referente;
+	}
+	public ArrayList<Alumno> getAlumnos() {
+		return alumnos;
+	}
+	public void setAlumnos(ArrayList<Alumno> alumnos) {
+		this.alumnos = alumnos;
+	}
+	
+	
+
+}

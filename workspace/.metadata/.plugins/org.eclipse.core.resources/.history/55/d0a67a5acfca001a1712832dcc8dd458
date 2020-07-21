@@ -1,0 +1,14 @@
+package ar.com.gl.debugging.entity;
+
+public class Bootcamp {
+
+	public static void main(String[] args) {
+		
+		final Celula celula = new Celula();
+		final Referente referente = new Referente("GL66", "Rodrigo Riquelme");
+		final Alumno alumnoUno = new Alumno(1,"Juan Perez");
+		final Alumno alumnoDos = new Alumno(2, "Pedro Sanchez");
+		final ArrayList<Alumno> alumnos = new ArrayList<>();
+	}
+
+}
