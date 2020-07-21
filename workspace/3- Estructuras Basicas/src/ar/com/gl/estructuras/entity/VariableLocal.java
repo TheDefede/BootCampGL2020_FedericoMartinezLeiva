@@ -6,7 +6,7 @@ public class VariableLocal {
 		
 		VariableLocal estudiante = new VariableLocal();
 		
-		estudiante.studentAge();
+		System.out.println("La edad del estudiante es : 5");
 
 	}
 	
@@ -14,7 +14,7 @@ public class VariableLocal {
 		int age = 0;
 		age +=5;
 		
-		System.out.println();	
+		System.out.println("La edad del estudiante es : " + age);	
 	}
 
 }
