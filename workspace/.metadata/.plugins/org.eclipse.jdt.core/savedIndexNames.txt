@@ -1,18 +1,2 @@
 INDEX VERSION 1.131+C:\GLBootCamp\repo\workspace\.metadata\.plugins\org.eclipse.jdt.core
-3618947022.index
-3898519556.index
-2603582242.index
-3822630589.index
 1714389962.index
-3554270193.index
-615283247.index
-2268108428.index
-1681887810.index
-861128291.index
-2559415236.index
-1951019390.index
-390103238.index
-1595011911.index
-2381316982.index
-2846201533.index
-888373144.index
