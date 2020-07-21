@@ -10,11 +10,11 @@ public class Electrodomestico {
 	public String color;
 	
 	public void encender() {
-		
+		System.out.println("Electrodomestico prendido");
 	}
 	
 	public void apagar() {
-		
+		System.out.println("Electrodomestico apagado");
 	}
 
 	

@@ -7,5 +7,10 @@ public class Cafetera extends Electrodomestico {
 	public void elegirSabor(String sabor) {
 		
 	}
+	
+	@Override
+	public void encender() {
+		System.out.println("Cafetera encendida");
+	}
 
 }

@@ -15,5 +15,10 @@ public class Heladera extends Electrodomestico{
 	public void extraerElemento(String elemento) {
 		
 	}
+	
+	@Override
+	public void encender() {
+		System.out.println("Heladera encendida");
+	}
 
 }
