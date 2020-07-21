@@ -1,6 +1,6 @@
 package ar.com.gl.flujos;
 
-public class Ejercicio50 {
+public class Ejercicio410 {
 	public static void main(String[] args) {
 		
 		String[] semana = {"Lunes", "Martes", 
