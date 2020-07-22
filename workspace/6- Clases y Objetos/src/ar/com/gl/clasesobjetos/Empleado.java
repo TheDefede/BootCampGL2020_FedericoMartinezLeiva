@@ -1,6 +1,8 @@
 package ar.com.gl.clasesobjetos;
 
-public class Empleado extends Persona implements Comparable<Empleado>{
+import java.util.Comparator;
+
+public class Empleado extends Persona{
 	
 	private String ID;
 	private String nombre;
@@ -11,6 +13,8 @@ public class Empleado extends Persona implements Comparable<Empleado>{
 	private int hijos;
 	private static double valorHoraExtra;
 	private int dni;
+	
+
 	
 	public Empleado(int dni) {
 		this.dni = dni;
@@ -111,7 +115,7 @@ public class Empleado extends Persona implements Comparable<Empleado>{
 	
 	public double calculoSueldoBruto() {
 		
-		double sueldoBruto = this.calculoHorasExtrasTrabajadas() + this.sueldoBase;
+		double sueldoBruto = (this.calculoHorasExtrasTrabajadas() + this.sueldoBase);
 		
 		return sueldoBruto;
 	}
@@ -125,7 +129,7 @@ public class Empleado extends Persona implements Comparable<Empleado>{
 		}
 		if (this.getHijos() > 0) {
 			retencion -= (this.getHijos() * 1);
-		}
+		}		
 		
 		retencion /= 100;
 		
@@ -137,21 +141,37 @@ public class Empleado extends Persona implements Comparable<Empleado>{
 		
 		return	this.getID() + " " + this.getNombre() + "\n" +
 				"Sueldo base: $" + this.getSueldoBase() + "\n" +
-				"Sueldo bruto: $" +this.calculoSueldoBruto() + "\n" +
 				"Horas extras: " + this.getHorasExtras() +  "\n" +
 				"tipo IRPF: " + this.getRetenciones() + "\n" +
 				"Casado: " + this.isCasado() + "\n" +
 				"Numero de Hijos: " + this.getHijos();
 	}
-
-	@Override
-	public int compareTo(Empleado o) {
-		return Double.compare(this.calculoSueldoBruto(),o.calculoSueldoBruto());
-		
-	}
-
-
 	
+	static Comparator<Empleado> getSueldoBruto(){
+		return new Comparator<Empleado>(){
+
+			@Override
+			public int compare(Empleado o1, Empleado o2) {
+				
+				return Double.compare(o1.calculoSueldoBruto(), o2.calculoSueldoBruto());
+				
+			}
+			
+		};
+	}
+	
+	static Comparator<Empleado> getHoraExtra(){
+		return new Comparator<Empleado>(){
+
+			@Override
+			public int compare(Empleado o1, Empleado o2) {
+				
+				return Integer.compare(o1.getHorasExtras(), o2.getHorasExtras());
+				
+			}
+			
+		};
+	}
 	
 	 
 }

@@ -16,8 +16,8 @@ public class EmpleadosMain {
 		String empleados, dni, estadoCivil, hijos, sueldo, horasExtras, id;
 		String regexEmpleados ="^1\\d|^[1-9]$|^20$";
 		String regexDni = "^[1-9]\\d{6}$|^[1-9]\\d{7}$";
-		String regexConfirmacion = "Sí|sí|Si|si|s|Yes|yes|y|1|No|no|n|0";
-		String regexAfirmativo = "Sí|sí|Si|si|s|Yes|yes|y|1";
+		String regexConfirmacion = "Sí|sí|Si|si|s|S|Yes|yes|y|1|No|no|n|N|0";
+		String regexAfirmativo = "Sí|sí|Si|si|s|Yes|yes|y|Y|1";
 		String regexNumeros= "^[1-9]\\d+$|^[1-9]$";
 		
 		empleados = validarInput("Introduce la cantidad de empleados entre 1 y 20: ", regexEmpleados, scanner);
@@ -85,7 +85,7 @@ public class EmpleadosMain {
 				horasExtras = validarInput("¿Cuantas? ", regexNumeros, scanner);
 				
 				arrayEmpleados[i].setHorasExtras(Integer.parseInt(horasExtras));
-			}else {
+			} else {
 				
 				horasExtras ="0";
 				
@@ -106,19 +106,30 @@ public class EmpleadosMain {
 		System.out.println("=============================");
 		
 		
-		List<Empleado> listaEmpleados = Arrays.asList(arrayEmpleados);
+		List<Empleado> listaEmpleadosSueldo = Arrays.asList(arrayEmpleados);
+		List<Empleado> listaEmpleadosHorasExtra = Arrays.asList(arrayEmpleados);
 		
-		Collections.sort(listaEmpleados);
+		Collections.sort(listaEmpleadosSueldo, Empleado.getSueldoBruto());
+		Collections.sort(listaEmpleadosHorasExtra, Empleado.getHoraExtra());
+		
 		System.out.println("=============================\n"
-				+ "Empleado con menor salario\n");
-		System.out.println(listaEmpleados.get(0));
+				+ "Empleado con mayor salario\n");
+		System.out.println(listaEmpleadosSueldo.get(listaEmpleadosSueldo.size()-1));
+		
 		System.out.println("=============================\n"
-				+ "Empleado con mayor salario");
-		System.out.println(listaEmpleados.get(listaEmpleados.size()-1));
-		System.out.println("=============================\n");
+				+ "Empleado con menor salario");
+		System.out.println(listaEmpleadosSueldo.get(0));
+		
+		System.out.println("=============================\n"
+				+ "Empleado con mas horas extras\n");		
+		System.out.println(listaEmpleadosSueldo.get(listaEmpleadosHorasExtra.size()-1));
+		
+		System.out.println("=============================\n"
+				+ "Empleado con menos horas extras");
+		System.out.println(listaEmpleadosHorasExtra.get(0));
 		
 		
-		for (Empleado empleado : arrayEmpleados) {
+		for (Empleado empleado : listaEmpleadosSueldo) {
 			
 			System.out.println("=============================");
 			
