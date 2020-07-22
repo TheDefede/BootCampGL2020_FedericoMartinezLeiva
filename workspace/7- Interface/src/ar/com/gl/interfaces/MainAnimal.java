@@ -8,6 +8,10 @@ public class MainAnimal {
 		
 		dog.dormir();
 		dog.sonidoAnimal();
+		
+		dog.Come("perro");
+		
+		InterfaceAnimal.Camina("perro");
 
 	}
 
