@@ -5,9 +5,8 @@ public class Ejercicio411 {
 		
 		String titulo = "BootCAmp 2020";
 		
-		char[] chars = titulo.toCharArray();
-		
-		for (char i : chars) {
+				
+		for (char i : titulo.toCharArray()) {
 			System.out.println("Letra: " + i);
 		}
 	}

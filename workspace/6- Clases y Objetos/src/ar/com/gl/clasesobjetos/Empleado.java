@@ -1,8 +1,8 @@
 package ar.com.gl.clasesobjetos;
 
-public class Empleado extends Persona{
+public class Empleado extends Persona implements Comparable<Empleado>{
 	
-	private int ID;
+	private String ID;
 	private String nombre;
 	private double sueldoBase;
 	private int horasExtras;
@@ -26,11 +26,11 @@ public class Empleado extends Persona{
 		System.out.println("Un empleado saltando");
 	}
 
-	public int getID() {
+	public String getID() {
 		return ID;
 	}
 
-	public void setID(int iD) {
+	public void setID(String iD) {
 		ID = iD;
 	}
 
@@ -69,10 +69,10 @@ public class Empleado extends Persona{
 	public String isCasado() {
 		
 		if (casado) {
-			return "Si";
+			return "Sí";
 		}
 		
-		return "no";
+		return "No";
 	}
 
 	public void setCasado(boolean casado) {
@@ -89,6 +89,10 @@ public class Empleado extends Persona{
 
 	public static double getValorHoraExtra() {
 		return valorHoraExtra;
+	}
+
+	public static void setValorHoraExtra(double valorHoraExtra) {
+		Empleado.valorHoraExtra = valorHoraExtra;
 	}
 
 	public int getDni() {
@@ -131,15 +135,22 @@ public class Empleado extends Persona{
 	@Override
 	public String toString() {
 		
-		return	this.getID() + this.getNombre() + "\n" +
-				"Sueldo base: " + this.getSueldoBase() + "\n" +
+		return	this.getID() + " " + this.getNombre() + "\n" +
+				"Sueldo base: $" + this.getSueldoBase() + "\n" +
+				"Sueldo bruto: $" +this.calculoSueldoBruto() + "\n" +
 				"Horas extras: " + this.getHorasExtras() +  "\n" +
 				"tipo IRPF: " + this.getRetenciones() + "\n" +
 				"Casado: " + this.isCasado() + "\n" +
 				"Numero de Hijos: " + this.getHijos();
 	}
-	
-	
+
+	@Override
+	public int compareTo(Empleado o) {
+		return Double.compare(this.calculoSueldoBruto(),o.calculoSueldoBruto());
+		
+	}
+
+
 	
 	
 	 
