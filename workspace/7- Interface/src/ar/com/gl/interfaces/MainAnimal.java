@@ -9,9 +9,9 @@ public class MainAnimal {
 		dog.dormir();
 		dog.sonidoAnimal();
 		
-		dog.Come("perro");
+		dog.come("perro");
 		
-		InterfaceAnimal.Camina("perro");
+		InterfaceAnimal.camina("perro");
 
 	}
 

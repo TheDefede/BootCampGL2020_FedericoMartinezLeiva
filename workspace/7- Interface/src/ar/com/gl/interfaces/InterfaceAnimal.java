@@ -5,11 +5,11 @@ public interface InterfaceAnimal {
 	public void dormir();
 	public void sonidoAnimal();
 	
-	public default void Come(String s) {
+	public default void come(String s) {
 		System.out.println("El " + s + " se alimenta ");
 	}
 	
-	public static void Camina(String s) {
+	public static void camina(String s) {
 		System.out.println("El " + s + " camina");
 	}
 
