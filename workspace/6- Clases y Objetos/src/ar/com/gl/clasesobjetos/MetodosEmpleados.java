@@ -91,7 +91,7 @@ public class MetodosEmpleados {
 				}
 				
 				
-				id = String.valueOf(((int) Math.floor((Math.random()*99999+1)) + 100000 ));
+				id = String.valueOf(((int) (Math.random()*99999+1)) + 100000 );
 				
 				id += "ABC";
 				
