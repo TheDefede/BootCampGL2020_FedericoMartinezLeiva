@@ -26,12 +26,11 @@ public class EmpleadosMain {
 		Collections.sort(listaEmpleadosSueldo, Empleado.getSueldoBruto());
 		Collections.sort(listaEmpleadosHorasExtra, Empleado.getHoraExtra());
 		
-		System.out.println("=============================\n"
-				+ "Empleado con mayor salario\n");
+		System.out.println("Empleado con mayor salario\n");
 		System.out.println(listaEmpleadosSueldo.get(listaEmpleadosSueldo.size()-1));
 		
 		System.out.println("=============================\n"
-				+ "Empleado con menor salario");
+				+ "Empleado con menor salario\n");
 		System.out.println(listaEmpleadosSueldo.get(0));
 		
 		System.out.println("=============================\n"
@@ -39,7 +38,7 @@ public class EmpleadosMain {
 		System.out.println(listaEmpleadosSueldo.get(listaEmpleadosHorasExtra.size()-1));
 		
 		System.out.println("=============================\n"
-				+ "Empleado con menos horas extras");
+				+ "Empleado con menos horas extras\n");
 		System.out.println(listaEmpleadosHorasExtra.get(0));
 		
 		
