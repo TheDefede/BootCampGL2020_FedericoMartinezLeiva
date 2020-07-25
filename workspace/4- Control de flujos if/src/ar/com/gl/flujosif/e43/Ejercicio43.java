@@ -12,12 +12,8 @@ public class Ejercicio43 {
 		} else if(compra > 350) {
 			descuento = compra * 0.25;
 			System.out.println("El descuento es de : " + descuento);
-		}else {
+		} else {
 			System.out.println("Sin descuento, el total es: " + compra);
 		}
-		
-		
 	}
-	
-
 }

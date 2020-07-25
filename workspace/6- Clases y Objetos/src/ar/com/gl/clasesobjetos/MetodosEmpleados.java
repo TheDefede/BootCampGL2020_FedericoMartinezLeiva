@@ -33,7 +33,7 @@ public class MetodosEmpleados {
 				arrayEmpleados[i] = new Empleado(Integer.parseInt(dni));
 				
 				System.out.print("Introduce un nombre: ");
-				arrayEmpleados[i].setNombre(scanner.next());
+				arrayEmpleados[i].setNombre(scanner.nextLine());
 				
 				estadoCivil = validarInput("¿Estas casado/a? ", regexConfirmacion);
 				
@@ -106,7 +106,7 @@ public class MetodosEmpleados {
 			
 			do {
 				System.out.print(mensaje);
-				input = scanner.next();
+				input = scanner.nextLine();
 				match = pattern.matcher(input);
 				
 			} while (!match.matches());
